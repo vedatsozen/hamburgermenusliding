@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAMBURGER MENU BUTTON / SCROLLING MENU</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+
+
+        <div id="container" onclick="run()">
+    
+            <hr id="tophr">
+        
+            <hr id="center1">
+        
+            <hr id="center2">
+        
+            <hr id="bottomhr">
+        
+        </div> 
+    
+
+
+
+<div id="menu">
+
+    <ul>
+        <li>Home</li>
+        <li>Our Vision</li>
+        <li>Services</li>
+        <li>Prices</li>
+        <li>Contact</li>
+    </ul>
+
+</div>
+        
+</body>
+
+<script>
+
+function run() {
+
+const menu = document.getElementById("menu") ;
+
+menu.classList.toggle("slideme");
+
+}
+
+document.getElementById("container").addEventListener("click", myfunction)
+
+function myfunction() {
+
+document.getElementById("center1").classList.toggle("rotateme");
+document.getElementById("center2").classList.toggle("rotateme2");
+document.getElementById("tophr").classList.toggle("hideme");
+document.getElementById("bottomhr").classList.toggle("hideme");
+document.getElementById("menu").classList.toggle("menumove");
+
+}
+
+</script>
+
+</html>
